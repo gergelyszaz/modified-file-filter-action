@@ -1,6 +1,6 @@
 class Commit < Struct.new(:data)
   def modified_file_paths
-    data["modified"]
+    data["added"] + data["modified"] + data["removed"]
   end
 
   def message
